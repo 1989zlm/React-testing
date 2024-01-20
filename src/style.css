@@ -1,0 +1,76 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: whitesmoke;
+  color: black;
+  font-family: "sans-serif";
+}
+.App {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background: aqua;
+  color: black;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header button {
+  height: 50px;
+  width: 50px;
+  border: 1px solid gray;
+  border-radius: 50%;
+  color: bisque;
+  background: green;
+  padding: 10px;
+}
+
+main {
+  flex: 1;
+  height: 80vh !important;
+}
+
+.Card {
+  max-width: 300px;
+  border: 1px solid;
+  border-radius: 10px;
+}
+.Card img {
+  width: 100%;
+  border-radius: 10px;
+}
+.Card .body {
+  margin-top: 10px;
+}
+.card h3 {
+}
+
+footer {
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  font: bold;
+}
+h3 {
+  text-align: center;
+  padding: 20px;
+}
+.text-area {
+  text-align: center;
+}
+
+/* .wrapper {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 20px;
+} */

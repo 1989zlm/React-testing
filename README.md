@@ -1,70 +1,45 @@
-# Getting Started with Create React App
+npx create-react-app komutu ile react uygulaması oluşturabiliyoruz.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+npm start ile react projesini ayağa kaldırabiliyoruz. (terminalin proje klasöründe olduğundan emin ol)
 
-## Available Scripts
+npm install / i paket_ismi bir kütüphaneyi projeye kurmaya yarar npm uninstall paket_ismi bir kütüphaneyi projeden kaldırmaya yarar
 
-In the project directory, you can run:
+1. node_modules: Bu klasör projenin bağımlılıklarını (3.parti paketler) örneğin React ve diğer paketleri içerir.Yeni indirdiğimiz kütüphanlerin koldarı da buraya eklenir Bu klasörü elle düznlemiiyoruz.
 
-### `npm start`
+2. public: Bu klasör, projenin genel olarak eişlebilir olmasını istedğimiz dosyları bulundurduğumuz klasör.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+3. gitignore: Bu dosya, git'e yüklenmesini istemdiğim klasörleri ve dosyları tanımlaıdğmız yer. Örneğin içerisine "node_modules" yazarsak projeyi githuba gönderirken belirlitilen dosya gitmez.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+4. package.json: Bu dosya, bağımlılıkları (kütüphaneler) , bazı komutları ve diğer projeye ayarlarını içeren JSON dosyası. Projemizin Kimliği.
 
-### `npm test`
+5. package.lock.json: Bağımlılaklarımızın spesifik sürümlerini ve bağımlılıklar arasındaki ilişkinin verisini tutar.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+6. src: Bu klasör, uygulamamzın kaynak kodunu içerir. Projeyi bu dosya içerisnde geliştiriri.z
 
-### `npm run build`
+. App.css / index.css: Stillendirme dosyları
+. App.js: Varsayılan olarak oluşturulan temel ugulama bileşeni. Bu dosya içererisne yazdıklarımız kerana ekrana basılır.
+. index.js: React uygulamasının başlanıç noktasıdır. Bu dosya ugulamada oluşturdğumuz sayf vee bileşnleri DOM'un içerisnde yerleştirilidği yerdir.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Koşullu Renderlama
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Ekrana basılacak olan arayüzün bir koşula göre ekrana gelme durumuna denir.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Koşullu renderlama için iki yöntem vardır
 
-### `npm run eject`
+- Terneray Operator (? :)
+  eğer else durumu da varsa yani koşul gerçekleşmezse'de ekrana bir şey basılıcaksa bu yöntem kullanır (if - else yöntemi yani)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+. Ve Operatörü (&&)
+eğer else durumu yoksa yanı koşul gerçeklmezse ekrana bir şey basılmayacaksa bu yöntem kullanılır
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Çoklu Renderlama
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+. Birden fazla elemanı ekran basmak istedğimiz durumda kullanıdğımız yapı
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+. Bir dizisi içerisndeki eleman sayısı kadar ekrana basma işlemi yapmak istiyorsak map yöntemi kullanırız
 
-## Learn More
+# Prop (Veri Aktarım Yöntemi)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+. Bir bileşnden diğerine veri aktarmak için kullandığımız yöntemdir
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+. Her zaman üstten aşşağıyaa doğru üstteki bileşenden alt bileşene doğru bir aktarım yönü vardır.
